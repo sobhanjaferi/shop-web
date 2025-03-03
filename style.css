@@ -6,3 +6,9 @@ div{
     background-color: blue;
     font-size: 20px;
 }
+
+.navigation{
+    display: flex;
+    justify-content: center;
+    color: aqua;
+}

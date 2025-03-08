@@ -1,0 +1,64 @@
+@font-face {
+    font-family: iran;
+    src: url(../Tools/Fonts/Dirooz.ttf);
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body{
+    font-family: iran;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container .form{
+    box-shadow: 0px 0px 40px black;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+
+.container .form .div-name , .div-date {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.container .form .div-gender{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .form .div-gender .div-male .ipt-male , .div-female .ipt-female{
+    width: 10px;
+}
+
+.container .form .div-comment{
+    display: grid;
+}
+
+.container .form .div-number{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.container .form .btn-account{
+    padding: 10px;
+    margin: 0px auto;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px black;
+    width: 200px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #444;
+    color: white;
+}

@@ -3,7 +3,7 @@ header nav{
     justify-content: space-between;
 }
 
-/* header nav right */
+/* ================================= header nav right ================================= */
 
 header nav .nav-right{
     margin: 10px;
@@ -42,7 +42,7 @@ header nav .nav-left .register-login-btn a{
     font-size: 1em;
 }
 
-/* header section */
+/* ================================= header section ================================= */
 
 .slider{
     position: relative;
@@ -95,7 +95,7 @@ header nav .nav-left .register-login-btn a{
     color: rgba(105, 105, 105, 0.703);
 }
 
-/* home section items */
+/* ================================= home section items ================================= */
 
 .home-page-product-section{
     padding: 20px 10px;
@@ -182,7 +182,7 @@ header nav .nav-left .register-login-btn a{
     right: 10px;
 }
 
-/* home section supper-offer */
+/* ================================= home section supper-offer ================================= */
 
 .section-two-container{
     display: grid;
@@ -316,7 +316,7 @@ header nav .nav-left .register-login-btn a{
     position: absolute;
 }
 
-/* mediy query  */
+/* ================================= mediy query ================================= */
 
 @media screen and (max-width : 1000px) {
 
@@ -470,5 +470,12 @@ header nav .nav-left .register-login-btn a{
 @media screen and (max-width : 550px){
     .section-two-container{
         display: none;
+    }
+}
+
+@media screen and (max-width:420px) {
+    header nav .nav-right{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
     }
 }

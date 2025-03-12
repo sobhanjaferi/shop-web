@@ -45,13 +45,12 @@ let set =  setInterval(()=>{
 let hourInput = document.getElementById("hour");
 let minInput = document.getElementById("minets");
 let secondInput = document.getElementById("seconds");
-    
-var second = 10;  
-var minet = ": "+ 4;
-var hour = ": "+ 2;
 
-let intervalHotOffer = setInterval(function(){
+var second = 7;
+var minet = 1;
+var hour = 1;
 
+let intervalHotOffer = setInterval(function () {
     hourInput.textContent = hour;
     minInput.textContent = minet;
     secondInput.textContent = second;
@@ -59,13 +58,19 @@ let intervalHotOffer = setInterval(function(){
 
     let textHottSupperOffer = document.getElementById("span-timer");
 
-    if(second == 0){
-        second = 10;
-        minet--;
-    }else if(minet == 0){
-        hour--;
-    }else if(hour == 0){
-        textHottSupperOffer.innerHTML = "پایان تخفیف";
+    if (second < 0) {
+        second = 2;
+        if (minet > 0) {
+            minet--;
+        } else if (hour > 0) {
+            hour--;
+            minet = 1;
+        } else {
+            textHottSupperOffer.innerHTML = "پایان تخفیف";
+            textHottSupperOffer.style.textAlign = "center";
+            textHottSupperOffer.style.color = "red";
+            textHottSupperOffer.style.marginLeft = "30px"
+            clearInterval(intervalHotOffer);
+        }
     }
-
-},1000);
+}, 1000);

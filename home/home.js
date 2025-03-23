@@ -46,9 +46,9 @@ let hourInput = document.getElementById("hour");
 let minInput = document.getElementById("minets");
 let secondInput = document.getElementById("seconds");
 
-var second = 7;
-var minet = 1;
-var hour = 1;
+var second = 60;
+var minet = 7;
+var hour = 29;
 
 let intervalHotOffer = setInterval(function () {
     hourInput.textContent = hour;
@@ -59,12 +59,12 @@ let intervalHotOffer = setInterval(function () {
     let textHottSupperOffer = document.getElementById("span-timer");
 
     if (second < 0) {
-        second = 2;
+        second = 59;
         if (minet > 0) {
             minet--;
         } else if (hour > 0) {
             hour--;
-            minet = 1;
+            minet = 59;
         } else {
             textHottSupperOffer.innerHTML = "پایان تخفیف";
             textHottSupperOffer.style.textAlign = "center";

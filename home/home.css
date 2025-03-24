@@ -18,7 +18,7 @@ header nav .nav-right i{
     color: #444;
 }
 
-/* header nav left */
+/* ================================= header nav left ================================= */
 
 header nav .nav-left .register-login-btn{
     display: flex;
@@ -33,7 +33,6 @@ header nav .nav-left .register-login-btn{
 
 header nav .nav-left .register-login-btn i{
     margin: 7px;
-
 }
 
 header nav .nav-left .register-login-btn a{
@@ -89,10 +88,14 @@ header nav .nav-left .register-login-btn a{
     color: white;
     margin-right: 5px;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 
 .slider .buttons i:hover{
-    color: rgba(105, 105, 105, 0.703);
+    color: rgb(208, 208, 208);
+    border: 3px solid rgb(208, 208, 208);
+    border-radius: 20px;
+    padding: 3px;
 }
 
 /* ================================= home section items ================================= */

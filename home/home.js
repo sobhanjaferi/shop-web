@@ -1,4 +1,16 @@
-// =============================================================== slider =========================================================================
+// ============================= search bar =============================
+
+let searchIpt = document.getElementById("search-ipt");
+let searchIcon = document.getElementById("search-icon");
+
+searchIpt.style.display = "none";
+
+searchIcon.addEventListener("click", ()=>{
+    searchIpt.style.display = "inline";
+    searchIcon.style.display = "none";
+})
+
+// ============================= slider =============================
 
 let slids = document.querySelector(".item");
 let slide1 = document.getElementById("slide1");
@@ -40,8 +52,8 @@ let set =  setInterval(()=>{
     },4000)
 },4000)
 
-// ====================================================== home section supper-offer ===========================================================
-    
+// ============================= home section supper-offer =============================
+
 let hourInput = document.getElementById("hour");
 let minInput = document.getElementById("minets");
 let secondInput = document.getElementById("seconds");

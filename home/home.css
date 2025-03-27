@@ -9,13 +9,22 @@ header nav .nav-right{
     margin: 10px;
 }
 
-header nav .nav-right a{
-    margin: 0px 15px;
+header nav .nav-right i{
+    color: #444;
+    margin: 10px 15px;
     font-size: 1.3em;
 }
 
-header nav .nav-right i{
-    color: #444;
+header nav .nav-right input{
+    border: 1px solid #444;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px 10px;
+    width: 15%;
+    transition: 1s;
+    display: block;
+    transform: translate(-0px, -5px);
+    position: absolute;
 }
 
 /* ================================= header nav left ================================= */
@@ -69,7 +78,7 @@ header nav .nav-left .register-login-btn a{
     z-index: 1;
     font-size: 1.5em;
     right: 10%;
-    top: 40%;
+    top: 60%;
     color: black;
 }
 
@@ -471,14 +480,30 @@ header nav .nav-left .register-login-btn a{
 }
 
 @media screen and (max-width : 550px){
+
     .section-two-container{
         display: none;
     }
 }
 
 @media screen and (max-width:420px) {
+
     header nav .nav-right{
         display: grid;
         grid-template-columns: repeat(2,1fr);
+    }
+
+    header nav .nav-right input{
+        transform: translate(-50px, 30px);
+    }
+}
+
+@media screen and (max-width:520px) {
+
+    header nav .nav-left .register-login-btn .login-btn-text{
+        display: none;
+    }
+    header nav .nav-right input{
+        width: 35%;
     }
 }

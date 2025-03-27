@@ -11,16 +11,10 @@ onlock.style.display = "none"
 lock.addEventListener("click",()=>{
     lock.style.display = "none";
     onlock.style.display = "inline";
+    passwordType.type = "text";
     onlock.addEventListener("click",()=>{
         onlock.style.display = "none";
         lock.style.display = "inline";
+        passwordType.type = "password";
     })
-})
-
-lock.addEventListener("click",()=>{
-    passwordType.type = "text";
-})
-
-onlock.addEventListener("click",()=>{
-    passwordType.type = "password";
 })

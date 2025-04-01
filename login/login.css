@@ -1,135 +1,89 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+@font-face {
+    font-family: iran;
+    src: url(../Tools/Fonts/Dirooz.ttf);
 }
-
-a{
-    color: white;
-    font-weight: bold;
+*{
+    box-sizing: border-box;
+    margin: 0px;
 }
 
 body{
-    background-image: url(../Tools/Imgs/download\ \(17\).jfif);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    font-family: iran;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
 }
 
 .container{
-    background-color: rgba(255, 255, 255, 0.146);
-    border-radius: 10px;
-    padding-bottom: 30px;
-    position: relative;
-    box-shadow: 0px 0px 20px rgba(230, 230, 230, 0.573);
-    transition: 0.85s;
-}
-
-.container:hover{
-    background-color: rgba(255, 255, 255, 0.256);
-    padding: 25px 10px;
-}
-
-.container form{
-    position: relative;
-    color: white;
-}
-
-.container form h1{
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: -10px;
-    text-transform: uppercase;
-    text-shadow: 7px 5px 7px rgb(58, 17, 44);
 }
 
-.container form .div-ipt{
-    margin: 0px 20px;
-}
-
-.container form .div-ipt input{
+.container .form{
+    padding: 10px;
+    border: none;
     width: 100%;
-    padding: 14px 10px;
-    border: 2px solid #444;
-    border-radius: 17px;
-    background-color: rgba(255, 255, 255, 0.429);
-    margin: 10px 0px;
-    transition: 0.5s;
-
 }
 
-.container form .div-ipt input:hover{
-    background-color: rgba(92, 92, 92, 0.489);
+input{
+    padding: 10px;
+    width: 50%;
+    border-radius: 10px;
+    border: 2px solid rgb(38, 168, 38);
 }
 
-.container form .div-ipt input::placeholder{
-    color: rgb(53, 53, 53);
-}
-
-.container form .div-ipt i{
-    position: absolute;
-    right: 35px;
-    transform: translateY(160%);
-    color: #444;
-}
-
-.container form .remmaber-forget{
+.container .form .div-name , .div-date {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    margin: 20px;
+    grid-template-columns: repeat(2,1fr);
 }
 
-.container form .remmaber-forget label input{
-    grid-column: 1/1;
-    margin: 5px;
-    accent-color: rgb(60, 0, 255);
-}
-.container form .remmaber-forget a{
-    grid-column: 3/3;
+.container .form .div-gender{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
 }
 
-.container form .btn{
-    margin: 10px;
+.container .form .div-gender .div-male .ipt-male , .div-female .ipt-female{
+    width: 10px;
 }
 
-.container form button{
-    width: 95%;
-    height: 70px;
-    padding: 15px;
-    border: 2px solid white;
-    border-radius: 17px;
-    background-image: url(../Tools/Imgs/download\ \(3\).jfif);
-    background-position: center;
-    background-size: cover;
-    color: white;
-    font-size: 20px;
+.div-male{
+    transform: translate(-10px);
+}
+
+.div-female{
+    transform: translate(200px);
+}
+.container .form .div-comment .textarea-comment{
+    width: 30%;
+    border-radius: 10px;
+}
+
+/* .container .form .div-comment{ */
+    /* background-color: red; */
+/* } */
+
+.container .form .div-number{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.container .form .btn-account{
+    padding: 10px;
+    margin: 0px auto;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
     font-weight: bold;
-    margin-top: 20px;
-    margin-left: 10px;
-    transition: background-image 1s ease-in-out;
-}
-
-.container form button:hover{
-    background-image: url(../Tools/Imgs/download\ \(17\).jfif);
-    background-position: center;
-    background-size: cover;
-}
-
-.container form .register-link{
-    text-align: center;
     font-size: 20px;
-    margin-top: 30px;
+    background-color: white;
+    color: rgb(146, 146, 146);
+    font-family: 'Gill Sans', 
+    'Gill Sans MT', Calibri,
+     'Trebuchet MS', sans-serif;
+     transition: 1s ease-in-out;
 }
 
-#ipt-text{
-    position: absolute;
-    z-index: 2;
-    transform: translateX(-396px);
-    width: 95%;
+.container .form .btn-account:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../acount/acount.css">
+    <link rel="stylesheet" href="../home/home.html">
+    <link rel="stylesheet" href="../Tools/Icons/fontawesome-free-6.7.2-web/css/all.min.css">
+    <link rel="web icon" href="../Tools/Imgs/login-icon.png">
+</head>
+<body>
+
+    <div class="container">
+        <form action="" method="get">
+            <h1>L o g i n</h1>
+            <br>
+            <div class="div-ipt">
+                <input type="email" name="useremail" id="ipt-email" placeholder="Email" required>
+            </div>
+            <div class="div-ipt">
+                <input type="password" name="userpassword" id="ipt-password" placeholder="Password" required>
+                <i class="fa-solid fa-eye" id="onlock"></i>
+                <i class="fa-solid fa-eye-slash" id="lock"></i>
+            </div>
+            <div class="div-ipt">
+                <input type="text" name="username" placeholder="User name" required>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="remmaber-forget">
+                <label><input type="checkbox">Remmaber me</label>
+                <a href="#">Forget password?</a>
+            </div>
+            <div class="btn">
+            <button type="submit">Login</button>
+        </div>
+            <div class="register-link">
+                <p>Don't have an account? 
+                    <a href="../acount/account.html">Creat</a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <script src="../acount/acount.js"></script>
+</body>
+</html>

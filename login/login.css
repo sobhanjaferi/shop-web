@@ -6,7 +6,7 @@
     box-sizing: border-box;
     margin: 0px;
 }
-
+/* ========================= main ========================= */
 body{
     font-family: iran;
     color: rgb(0, 0, 0);
@@ -14,76 +14,60 @@ body{
 }
 
 .container{
-    display: flex;
-    justify-content: center;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px #444;
+    border-radius: 10px;
 }
 
 .container .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 10px;
     border: none;
     width: 100%;
+
 }
 
 input{
-    padding: 10px;
-    width: 50%;
-    border-radius: 10px;
-    border: 2px solid rgb(38, 168, 38);
+    padding: 15px;
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    border: 1px solid #444;
+    margin-top: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-.container .form .div-name , .div-date {
+input:focus{
+    outline: none;
+    border: 2px solid rgb(0, 55, 255);
+}
+
+.container .form .div-name , .div-date , .div-number{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-}
-
-.container .form .div-gender{
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-}
-
-.container .form .div-gender .div-male .ipt-male , .div-female .ipt-female{
-    width: 10px;
-}
-
-.div-male{
-    transform: translate(-10px);
-}
-
-.div-female{
-    transform: translate(200px);
-}
-.container .form .div-comment .textarea-comment{
-    width: 30%;
-    border-radius: 10px;
-}
-
-/* .container .form .div-comment{ */
-    /* background-color: red; */
-/* } */
-
-.container .form .div-number{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,1fr);
 }
 
 .container .form .btn-account{
-    padding: 10px;
-    margin: 0px auto;
-    border: none;
-    border-radius: 10px;
-    width: 200px;
+    background-color:  rgb(0, 55, 255);
+    color: white;
+    width: 100%;
     font-weight: bold;
-    font-size: 20px;
-    background-color: white;
-    color: rgb(146, 146, 146);
-    font-family: 'Gill Sans', 
-    'Gill Sans MT', Calibri,
-     'Trebuchet MS', sans-serif;
-     transition: 1s ease-in-out;
+    letter-spacing: 1px;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
 }
 
 .container .form .btn-account:hover{
     background-color: rgb(0, 0, 0);
     color: white;
+}
+
+hr{
+    margin-bottom: 20px;
+    border: 1px solid #444;
 }

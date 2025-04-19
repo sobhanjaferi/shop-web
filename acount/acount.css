@@ -128,6 +128,10 @@ body{
     margin-top: 30px;
 }
 
+.container form .register-link a{
+    color: rgb(0, 0, 0);
+}
+
 #ipt-text{
     position: absolute;
     z-index: 2;

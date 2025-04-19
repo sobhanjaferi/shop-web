@@ -16,18 +16,18 @@ body{
 .container{
     max-width: 500px;
     margin: 20px auto;
-    box-shadow: 0px 0px 10px #444;
-    border-radius: 10px;
 }
 
 .container .form{
+    max-width: 500px;
+    box-shadow: 0px 0px 10px #444;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 10px;
     border: none;
-    width: 100%;
-
+    margin: 20px;
 }
 
 input{
@@ -44,6 +44,8 @@ input{
 input:focus{
     outline: none;
     border: 2px solid rgb(0, 55, 255);
+    padding: 14px;
+    background-color: rgb(236, 236, 236);
 }
 
 .container .form .div-name , .div-date , .div-number{
@@ -51,23 +53,37 @@ input:focus{
     grid-template-columns: repeat(1,1fr);
 }
 
+.div-number{
+    position: relative;
+}
+
+.div-number i{
+    position: absolute;
+    left: 15px;
+    top: 55px;
+}
+
 .container .form .btn-account{
     background-color:  rgb(0, 55, 255);
     color: white;
     width: 100%;
+    font-size: 1.2em;
     font-weight: bold;
-    letter-spacing: 1px;
-    padding: 15px;
+    letter-spacing: 3px;
+    padding: 10px;
     border: none;
     border-radius: 15px;
+    transition: 0.3s ease;
+    text-align: center;
 }
 
 .container .form .btn-account:hover{
-    background-color: rgb(0, 0, 0);
+    background-color:  rgb(0, 29, 133);
     color: white;
 }
 
 hr{
     margin-bottom: 20px;
     border: 1px solid #444;
+    border-radius: 10px;
 }

@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account</title>
     <link rel="stylesheet" href="../home/home.html">
-    <link rel="stylesheet" href="../main/main.css">
+    <link rel="stylesheet" href="../main/css/main.css">
     <link rel="web icon" href="../Tools/Imgs/account-icon.png">
     <link rel="stylesheet" href="../login/login.css">
+    <link rel="stylesheet" href="../Tools/Icons/fontawesome-free-6.7.2-web/css/all.min.css">
 </head>
 <body>
 
@@ -16,23 +17,24 @@
             <div class="div-name">
             <label for="name">لطفا نام خودرا وارد کنید:</label>
             <input type="text" class="ipt-name" placeholder="نام و نام خانوادگی"
-             id="name" name="name" required>
-            </div>
-            <br>
-            <hr>
-            <div class="div-date">
-                <label for="date">تاریخ تولد خودرا وارد کنید:</label>
-                <input type="date" id="date" class="ipt-date" name="date" required>
+             id="name" name="name " required>
             </div>
             <br>
             <hr>
             <div class="div-number">
                 <label for="number">تلفن همراه خودرا وارد کنید:</label>
                     <input type="number" id="number" class="ipt-number"
-                    placeholder="تلفن همراه" required>
+                    placeholder="تلفن همراه" name="number " required>
+                    <i class="fa-solid fa-phone"></i>
             </div>
             <br>
-            <button type="submit" class="btn-account">ورود</button>
+            <hr>
+            <div class="div-date">
+                <label for="date">تاریخ تولد خودرا وارد کنید:</label>
+                <input type="date" id="date" class="ipt-date" name="date " required>
+            </div>
+            <br>
+            <a href="../home/home.html"  class="btn-account">ورود</a>
         </form>
     </div>
 

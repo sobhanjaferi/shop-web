@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shop Mall</title>
-    <link rel="stylesheet" href="../main/css/main.css">
+    <!-- <link rel="stylesheet" href="../main/main.css"> -->
     <link rel="stylesheet" href="../home/home.css">
     <link rel="stylesheet" href="../Tools/Icons/fontawesome-free-6.7.2-web/css/all.min.css">
     <link rel="stylesheet" href="../main/flexboxgrid.css">
+    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
 </head>
 <body id="home-body">
     
@@ -27,6 +28,10 @@
                 </div>
             </div>
         </nav>
+
+        <!-- ================================= slider ================================= -->
+
+
         <section class="slider">
             <div class="slids">
                 <div class="item" id="slide1">
@@ -35,7 +40,7 @@
                 </div>
                 <div class="item" id="slide2">
                     <img src="../Tools/Imgs/2.jpg" alt="">
-                    <span style="color: rgb(255, 255, 255);">کیفیت صدا هایی که همیشه دنبالش بودی اینجاست</span>
+                    <span>کیفیت صدا هایی که همیشه دنبالش بودی اینجاست</span>
                 </div>
                 <div class="item" id="slide3">
                     <img src="../Tools/Imgs/3.jpg" alt="">
@@ -48,10 +53,20 @@
                 <i id="icon2" class="fa-solid fa-circle"></i>
                 <i id="icon3" class="fa-solid fa-circle"></i>
             </div>
+
+            <div class="next_befor">
+
+                <div class="next_btn" id="next_btn"><</div>
+                <div class="befor_btn" id="befor_btn">></div>
+
+            </div>
+
         </section>
     </header>
 
     <main>
+
+        <!-- ================================= offer items ================================= -->
 
         <section class="home-page-product-section">
             <div class="row">
@@ -72,11 +87,12 @@
                         </div>
                         <div class="left">
                             <div class="exetend-btn">
-                            <a class="b-text" href="">علاقه</a>
                             <a class="b-icon" href=""><i class="fas fa-heart"></i></a>
                             <div class="exetend-btn">
-                                <a class="b-text" href="">خرید</a>
-                                <a class="b-icon" href="" id="shop_icons"><i class="fas fa-shopping-cart"></i></a>
+                                    <a href="" id="b-icon-text">
+                                        <p id="text_shop_card" class="text_shop_card">خرید</p>
+                                        <i class="fas fa-shopping-cart"></i>
+                                </a>
                             </div>
                         </div>
                         </div>
@@ -107,10 +123,8 @@
                         </div>
                         <div class="left">
                             <div class="exetend-btn">
-                            <a class="b-text" href="">علاقه</a>
                             <a class="b-icon" href=""><i class="fas fa-heart"></i></a>
                             <div class="exetend-btn">
-                                <a class="b-text" href="">خرید</a>
                                 <a class="b-icon" href=""><i class="fas fa-shopping-cart"></i></a>
                             </div>
                             </div>
@@ -141,10 +155,8 @@
                         </div>
                         <div class="left">
                             <div class="exetend-btn">
-                            <a class="b-text" href="">علاقه</a>
                             <a class="b-icon" href=""><i class="fas fa-heart"></i></a>
                             <div class="exetend-btn">
-                                <a class="b-text" href="">خرید</a>
                                 <a class="b-icon" href=""><i class="fas fa-shopping-cart"></i></a>
                             </div>
                             </div>
@@ -174,11 +186,9 @@
                         </div>
                         <div class="left">
                             <div class="exetend-btn">
-                            <a class="b-text" href="">علاقه</a>
                             <a class="b-icon" href=""><i class="fas fa-heart"></i></a>
 
                             <div class="exetend-btn">
-                            <a class="b-text" href="">خرید</a>
                             <a class="b-icon" href=""><i class="fas fa-shopping-cart"></i></a>
                                     </div>
                                 </div>
@@ -191,9 +201,11 @@
     </div>
         </section>
 
-        <section class="supper-offer-section">
+        <!-- ================================= supper offer timer ================================= -->
+
+        <section class="supper-offer-section" style="direction: rtl;">
             <div class="section-two-container">
-                <div class="supper-offer">
+                <div class="supper-offer" style="direction: rtl;">
                     <div class="img">
                         <img src="../Tools/Imgs/VH500.jpg" alt="">
                     </div>
@@ -213,7 +225,7 @@
                         <span id="hour"></span>
                         </div>
                     </div>
-                    <div class="text-timer">
+                    <div class="text-timer" style="direction: rtl;">
                         <span id="span-timer">زمان باقی مانده تا پایان تخفیف</span>
                     </div>
                     <div class="header">
@@ -228,6 +240,8 @@
 
         </section>
 
+        <!-- ================================= sison list ================================= -->
+
         <section class="list-items-section">
 
             <div class="container">
@@ -235,25 +249,25 @@
 
                     <div class="list-one">
                         <div class="img-one">
-                            <img src="../Tools/Imgs/list-img-1.webp" alt="">
+                            <img src="../Tools/Imgs/list-img-1.webp" title="هدست های سامسونگ" alt="">
                         </div>
                     </div>
 
                     <div class="list-two">
                         <div class="img-two">
-                            <img src="../Tools/Imgs/list-img-2.jpg" alt="">
+                            <img src="../Tools/Imgs/list-img-2.jpg" title="هدست های رپو" alt="">
                         </div>
                     </div>
 
                     <div class="list-three">
                         <div class="img-three">
-                            <img src="../Tools/Imgs/list-img-3.jpg" alt="">
+                            <img src="../Tools/Imgs/list-img-3.jpg" title="هدست های اونی کوما" alt="">
                         </div>
                     </div>
 
                     <div class="list-four">
                         <div class="img-four">
-                            <img src="../Tools/Imgs/list-img-4.jpg" alt="">
+                            <img src="../Tools/Imgs/list-img-4.jpg" title="هدست های گیمینگ"" alt="">
                         </div>
                     </div>
 
@@ -262,39 +276,102 @@
 
         </section>
 
-        <section class="first-items-section">
-            <div class="owl-carousel owl-theme">
-            <div class="container">
-                <div class="item-one">
-                    <div class="img">
-                        <img src="../Tools/Imgs/p1.webp" alt="">
-                    </div>
-                    <div class="title">
-                        هدست گیمینگ رپو مدل 2300
-                    </div>
-                    <div class="buttons">
-                    <div class="right">
-                        <span class="price">2 میلیون تومان</span>
-                    </div>
-                    <div class="left">
-                        <div class="exetend-btn">
-                        <a class="b-text" href="">علاقه</a>
+        <!-- ================================= first list demo ================================= -->
+
+        <section class="home-section-demo">
+            <div class="container" id="container">
+                <div class="owl-carousel owl-theme" id="owl_carousel">
+
+                <div class="item_one_demo" id="item_one_demo">
+                    <div class="img"><img src="../Tools/Imgs/item_1.jpg" alt=""></div>
+                    <br>
+                    <div class="name" id="name">W300 هدست سامان مدل</div>
+                    <div class="price" id="price">قیمت : 1900 میلیون تومان</div>
+                    <div class="buttons" id="buttons">
                         <a class="b-icon" href=""><i class="fas fa-heart"></i></a>
-                        <div class="exetend-btn">
-                            <a class="b-text" href="">خرید</a>
-                            <a class="b-icon" href="" id="shop_icons"><i class="fas fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-                    </div>
+                        <a class="b-icon" href=""><i class="fas fa-shopping-cart"></i></a>
                     </div>
                 </div>
+                <div class="item_two_demo" id="item_two_demo">
+                    <div class="img"><img src="../Tools/Imgs/item_2.webp" alt=""></div>
+                    <br>
+                    <div class="name" id="name">NM500 هدست رد راگن مدل</div>
+                    <div class="price" id="price">قیمت : 870 هزار تومان</div>
+                    <div class="buttons" id="buttons">
+                        <a class="b-icon" href=""><i class="fas fa-heart"></i></a>
+                        <a class="b-icon" href=""><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="item_three_demo" id="item_three_demo">
+                    <div class="img"><img src="../Tools/Imgs/item_3.jpg" alt=""></div>
+                    <br>
+                    <div class="name" id="name">AS350 هدست ایسوس مدل</div>
+                    <div class="price" id="price">قیمت : 650 هزار تومان</div>
+                    <div class="buttons" id="buttons">
+                        <a class="b-icon" href=""><i class="fas fa-heart"></i></a>
+                        <a class="b-icon" href=""><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="item_four_demo" id="item_four_demo">
+                    <div class="img"><img src="../Tools/Imgs/item_4.jfif" alt=""></div>
+                    <br>
+                    <div class="name" id="name">s400 هدست سونی مدل</div>
+                    <div class="price" id="price">قیمت : 2600 میلیون تومان</div>
+                    <div class="buttons" id="buttons">
+                        <a class="b-icon" href=""><i class="fas fa-heart"></i></a>
+                        <a class="b-icon" href=""><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="item_five_demo" id="item_five_demo">
+                    <div class="img"><img src="../Tools/Imgs/item_6.webp" alt=""></div>
+                    <br>
+                    <div class="name" id="name"> JK32 هدست سونی مدل</div>
+                    <div class="price" id="price">قیمت : 790 هزار تومان</div>
+                    <div class="buttons" id="buttons">
+                        <a class="b-icon" href=""><i class="fas fa-heart"></i></a>
+                        <a class="b-icon" href=""><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                <div class="item_sixe_demo" id="item_sixe_demo">
+                    <div class="img"><img src="../Tools/Imgs/item_7.jpg" alt=""></div>
+                    <br>
+                    <div class="name" id="name">JF600 هدست دوو مدل</div>
+                    <div class="price" id="price">قیمت : 899 هزار تومان</div>
+                    <div class="buttons" id="buttons">
+                        <a class="b-icon" href=""><i class="fas fa-heart"></i></a>
+                        <a class="b-icon" href=""><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+
+                </div>
             </div>
-            </div>
-        </section>
+        </section>        
 
     </main>
     
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+    </script>
     <script src="../home/home.js"></script>
     <script src="../shoppingbox/shoppingbox .js"></script>
+
 </body>
 </html>

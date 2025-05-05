@@ -52,6 +52,24 @@ let set =  setInterval(()=>{
     },4000)
 },4000)
 
+// ============================= slider after befor btn =============================
+
+let after_Btn = document.getElementById("next_btn");
+let befor_Btn = document.getElementById("befor_btn");
+
+befor_Btn.addEventListener("click", ()=>{
+    slide2.style.display = "block";
+    slide1.style.display = "none";
+    slide3.style.display = "none";
+});
+
+
+befor_Btn.addEventListener("dblclick", ()=>{
+    slide2.style.display = "none";
+    slide1.style.display = "none";
+    slide3.style.display = "block";
+})
+
 // ============================= home section supper-offer =============================
 
 let hourInput = document.getElementById("hour");
@@ -81,7 +99,7 @@ let intervalHotOffer = setInterval(function () {
             textHottSupperOffer.innerHTML = "پایان تخفیف";
             textHottSupperOffer.style.textAlign = "center";
             textHottSupperOffer.style.color = "red";
-            textHottSupperOffer.style.marginLeft = "30px"
+            textHottSupperOffer.style.marginLeft = "30px";
             clearInterval(intervalHotOffer);
         }
     }

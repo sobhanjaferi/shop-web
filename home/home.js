@@ -1,13 +1,46 @@
 // ============================= search bar =============================
 
+let listICons = document.getElementById("list_icon");
+let iconList = document.getElementById("list_icon_true");
+let closeIcon = document.getElementById("list_icon_false");
+
+let navBarDivIcons = document.getElementById("container_list_icon");
+let navBarIconFirst = document.getElementById("acount");
+let navBarIconSecond = document.getElementById("house");
+let navBarIconThird = document.getElementById("shopping_card");
+
 let searchIpt = document.getElementById("search-ipt");
 let searchIcon = document.getElementById("search-icon");
 
-searchIpt.style.display = "none";
+const navBar = {
+    1 : listICons,
+    2 : iconList,
+    3 : closeIcon,
+    4 : navBarDivIcons,
+    5 : navBarIconFirst,
+    6 : navBarIconSecond,
+    7 : navBarIconThird,
+    8 : searchIpt,
+    9 : searchIcon
+}
+
+navBar[8].style.display = "none";
 
 searchIcon.addEventListener("click", ()=>{
-    searchIpt.style.display = "inline";
-    searchIcon.style.display = "none";
+    navBar[8].style.display = "inline";
+    navBar[9].style.display = "none";
+})
+
+navBar[2].addEventListener("click", function(){
+    navBar[4].style.display = "flex";
+    navBar[2].style.display = "none";
+    navBar[3].style.display = "flex";
+})
+
+navBar[3].addEventListener("click", function(){
+    navBar[4].style.display = "none";
+    navBar[2].style.display = "flex";
+    navBar[3].style.display = "none";
 })
 
 // ============================= slider =============================
@@ -52,33 +85,15 @@ let set =  setInterval(()=>{
     },4000)
 },4000)
 
-// ============================= slider after befor btn =============================
-
-let after_Btn = document.getElementById("next_btn");
-let befor_Btn = document.getElementById("befor_btn");
-
-befor_Btn.addEventListener("click", ()=>{
-    slide2.style.display = "block";
-    slide1.style.display = "none";
-    slide3.style.display = "none";
-});
-
-
-befor_Btn.addEventListener("dblclick", ()=>{
-    slide2.style.display = "none";
-    slide1.style.display = "none";
-    slide3.style.display = "block";
-})
-
 // ============================= home section supper-offer =============================
 
 let hourInput = document.getElementById("hour");
-let minInput = document.getElementById("minets");
+let minInput = document.getElementById("minutes");
 let secondInput = document.getElementById("seconds");
 
-var second = 60;
-var minet = 7;
-var hour = 29;
+let second = 60;
+let minet = 7;
+let hour = 29;
 
 let intervalHotOffer = setInterval(function () {
     hourInput.textContent = hour;

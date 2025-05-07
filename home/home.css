@@ -4,13 +4,13 @@
 }
 *{
     font-family: iran;
-    /* direction: rtl; */
     box-sizing: border-box;
 }
 
 body{
     font-size: 16px;
     margin: 0px;
+    padding: 0px;
 }
 a{
     text-decoration: none;
@@ -52,12 +52,57 @@ header nav{
     align-items: center;
     position: fixed;
     z-index: 10;
+    right: 0px;
     top: 0px;
 }
 
 header nav .nav-right{
+    display: flex;
+    justify-content: start;
     margin: 10px;
-    max-width: 250px;
+    width: 100%;
+    max-width: 500px;
+    /* background-color: red; */
+}
+
+header nav .nav-right .container_list_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 200px;
+    padding: 5px 2px;
+}
+
+header nav .nav-right .container_list_icon i{
+    color: #444 ;
+    margin: 15px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+header nav .nav-right .container_list_icon i:hover{
+    color: rgb(230, 83, 30);
+}
+
+header nav .nav-right .list_icon{
+    position: relative;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+header nav .nav-right .list_icon i{
+    position: absolute;
+    margin-right: 22px;
+}
+
+header nav .nav-right .list_icon #list_icon_true{
+    display: none;
+}
+
+header nav .nav-right .list_icon #list_icon_false{
+    display: none;
 }
 
 header nav .nav-right i{
@@ -68,14 +113,12 @@ header nav .nav-right i{
 
 header nav .nav-right input{
     border: 1px solid #444;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 5px 10px;
-    width: 15%;
-    transition: width 1s ease-in-out;
-    display: block;
-    transform: translate(-0px, -5px);
-    position: absolute;
+    border-radius: 100px;
+    margin: 5px;
+    margin-right: 10px;
+    padding: 7px 10px;
+    width: 300px;
+    max-width: 300px;
 }
 
 /* ================================= header nav left ================================= */
@@ -87,7 +130,7 @@ header nav .nav-left .register-login-btn{
     border-radius: 5px;
     margin: 10px;
     padding: 5px 8px;
-    color: #444;
+    transition: 0.4s ease-in-out;
 }
 
 header nav .nav-left{
@@ -96,12 +139,26 @@ header nav .nav-left{
 
 header nav .nav-left .register-login-btn i{
     margin: 7px;
+    transition: 0.4s;
 }
 
 header nav .nav-left .register-login-btn a{
     margin: 0px 10px;
     color: #444;
     font-size: 1em;
+    transition: 0.4s;
+}
+
+header nav .nav-left .register-login-btn:hover{
+    border: 1px solid rgb(230, 83, 30);
+}
+
+header nav .nav-left .register-login-btn:hover i{
+    color: rgb(230, 83, 30);
+}
+
+header nav .nav-left .register-login-btn:hover a{
+    color: rgb(230, 83, 30);
 }
 
 /* ================================= header section ================================= */
@@ -143,56 +200,6 @@ header nav .nav-left .register-login-btn a{
     display: block;
 }
 
-.slider .next_befor{
-    z-index: 1;
-    width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-top: 140px;
-    position: absolute;
-    top: 80px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.slider .next_befor .next_btn{
-    border-radius: 100px;
-    width: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.53);
-    font-weight: bold;
-    font-size: 2em;
-    color: rgb(230, 83, 30);
-    cursor: pointer;
-    box-shadow: 0px 0px 10px #444;
-    transition: 0.80s;
-}
-
-.next_befor .next_btn:hover{
-    background-color: white;
-}
-
-.slider .next_befor .befor_btn{
-    border-radius: 100px;
-    width: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.53);
-    font-weight: bold;
-    font-size: 2em;
-    color: rgb(230, 83, 30);
-    cursor: pointer; 
-    box-shadow: 0px 0px 10px #444;
-    transition: 0.80s;
-}
-
-.next_befor .befor_btn:hover{
-    background-color: white;
-}
-
 .slider .buttons{
     position: absolute;
     bottom: 30px;
@@ -216,9 +223,10 @@ header nav .nav-left .register-login-btn a{
     color: rgb(152, 152, 152);
 }
 
-/* ================================= home section items ================================= */
+/* ================================= home section offer items ================================= */
 
 .home-page-product-section{
+    direction: rtl;
     padding: 20px 10px;
     font-size: 1em;
     transition: 0.85s;
@@ -282,7 +290,7 @@ header nav .nav-left .register-login-btn a{
     margin: 5px;
     color: white;
     cursor: pointer;
-    transition: .80s;
+    transition: 0.4s;
 }
 
 .shoping-card .buttons .left .exetend-btn{
@@ -300,7 +308,7 @@ header nav .nav-left .register-login-btn a{
 
 .shoping-card .buttons .left .exetend-btn a i:hover{
     width: 70px;
-    background-color: rgb(1, 183, 183);
+    background-color: rgb(0, 147, 147);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -470,114 +478,88 @@ header nav .nav-left .register-login-btn a{
 /* ================================= home section list ================================= */
 
 .list-items-section .container{
-    margin: 40px auto;
     /* background-color: red; */
+    margin: 50px auto;
+    direction: rtl;
 }
 
 .list-items-section .container .div-list-home{
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
 }
 
-.list-items-section .container .div-list-home .list-one{
+.list-items-section .container .div-list-home .list-one , .list-two , .list-three , .list-four , .list-five , .list-sixe{
     display: flex;
     justify-content: center;
-    margin: 10px 10px;
+    align-items: center;
+    margin: 20px 20px;
 }
 
-.list-items-section .container .div-list-home .list-one .img-one img{
+.list-items-section .container .div-list-home .list-one .img-one img , .list-two .img-two img , .list-three .img-three img , .list-four .img-four img , .list-five .img-five img , .list-sixe .img-sixe img{
     box-shadow: 0px 0px 20px #444;
-    border-radius: 1000px;
-    width: 200px;
+    border-radius: 300px;
+    width: 100%;
     transition: 0.80s;
     cursor: pointer;
 }
 
-.list-items-section .container .div-list-home .list-two{
-    display: flex;
-    justify-content: center;
-    margin: 10px 10px;
-}
-
-.list-items-section .container .div-list-home .list-two .img-two img{
-    box-shadow: 0px 0px 20px #444;
-    border-radius: 1000px;
-    width: 200px;
-    transition: 0.80s;
-    cursor: pointer;
-}
-
-.list-items-section .container .div-list-home .list-three{
-    display: flex;
-    justify-content: center;
-    margin: 10px 10px;
-}
-
-.list-items-section .container .div-list-home .list-three .img-three img{
-    box-shadow: 0px 0px 20px #444;
-    border-radius: 1000px;
-    width: 200px;
-    transition: 0.80s;
-    cursor: pointer;
-}
-
-.list-items-section .container .div-list-home .list-four{
-    display: flex;
-    justify-content: center;
-    margin: 10px 10px;
-}
-
-.list-items-section .container .div-list-home .list-four .img-four img{
-    box-shadow: 0px 0px 20px #444;
-    border-radius: 1000px;
-    width: 200px;
-    transition: 0.80s;
-    cursor: pointer;
-}
-
-.img-one img:hover , .img-two img:hover , .img-three img:hover , .img-four img:hover{
-    padding: 10px;
-    background-color: #555;
+.img-one img:hover , .img-two img:hover , .img-three img:hover , .img-four img:hover , .img-five img:hover , .img-sixe img:hover{
+    padding: 5px;
+    background-color: #444;
 }
 
 /* ================================= home section demo ================================= */
 
 .home-section-demo{
     padding: 10px;
-    max-width: 1200px;
+    max-width: 100%;
+    height: 450px;
     margin: auto;
+    margin-left: 15px;
+    margin-right: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50px;
+    border-radius: 20px;
     box-shadow: 0px 0px 10px 0px #444;
+    /* background-color: red; */
+}
+
+.home-section-demo .container{
+    /* background-color: aqua; */
+    width: 88%;
+    max-width: 100%;
 }
 
 .home-section-demo .container #owl_carousel{
-    /* background-color: red; */
+    /* background-color: blue; */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    box-shadow: none;
+    margin: 0px auto;
+    /* width: 110%; */
+    /* max-width: 100%; */
 }
 
 .home-section-demo .container #owl_carousel .item_one_demo , .item_two_demo , .item_three_demo , .item_four_demo , .item_five_demo , .item_sixe_demo{
     /* background-color: blue; */
-    margin: 10px;
+    margin: 10px 10px;
     padding: 10px;
-    width: 210px;
-    height: 400px;
-    border-radius: 15px;
+    width: 98%;
+    height: 380px;
+    border-radius: 20px;
     box-shadow: 0px 0px 4px 0px #444;
     transition: 0.5s;
+    background-color: white;
+    cursor: pointer;
 }
 
 .home-section-demo .container #owl_carousel .name{
     /* background-color: red; */
     font-size: 1em;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-top: 10px;
     text-align: center;
     color: #444;
@@ -590,8 +572,9 @@ header nav .nav-left .register-login-btn a{
 }
 
 .home-section-demo .container #owl_carousel .buttons{
-    margin-top: 50px;
     margin-left: 5px;
+    position: absolute;
+    bottom: 30px;
 }
 
 .home-section-demo .container #owl_carousel .buttons a{
@@ -600,23 +583,66 @@ header nav .nav-left .register-login-btn a{
     border-radius: 100px;
     color: white;
     background-color: aqua;
-    transition: 0.80s;
+    transition: 0.4s;
 }
 
 .home-section-demo .container #owl_carousel .buttons a:hover{
-    padding: 10px 28px;
+    padding: 8px 24px;
+    background-color: rgb(0, 147, 147);
 }
 
 .home-section-demo .container #owl_carousel .item_one_demo:hover , .item_two_demo:hover , .item_three_demo:hover , .item_four_demo:hover , .item_five_demo:hover , .item_sixe_demo:hover{
     box-shadow: 0px 0px 10px 1px black;
 }
 
-.home-section-demo .container #owl_carousel div img{
-    width: 180px;
+.home-section-demo .container #owl_carousel div .img{
+    /* background-color: red; */
+    width: 95%;
+    height: 180px;
     margin: auto;
 }
 
+.home-section-demo .container #owl_carousel div .img img{
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 10px;
+}
+
 /* ================================= mediy query ================================= */
+
+@media screen and (max-width : 1200px){
+
+    header nav .nav-right .container_list_icon{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 70px;
+        box-shadow: 0px 0px 10px #444;
+        display: none;
+    }
+
+    header nav .nav-right .list_icon{
+        display: flex;
+    }
+
+    header nav .nav-right .list_icon #list_icon_true{
+        display: flex;
+    }
+
+    .list-items-section .container{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .list-items-section .container .div-list-home{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+}
 
 @media screen and (max-width : 1000px) {
 
@@ -652,9 +678,13 @@ header nav .nav-left .register-login-btn a{
 
 @media screen and (max-width : 985px) {
     
+    .list-items-section .container{
+        display: flex;
+    }
+
     .list-items-section .container .div-list-home{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
 }
@@ -721,12 +751,12 @@ header nav .nav-left .register-login-btn a{
         max-width: 45%;
         width: 43%;
     }
-
+    
     .section-two-container .supper-offer .timer{
         top: 50%;
         left: 20%;
     }
-
+    
     .section-two-container .supper-offer .text-timer span{
         font-size: 100%;
         width: 41%;
@@ -741,7 +771,27 @@ header nav .nav-left .register-login-btn a{
 
 }
 
-@media screen and (max-width : 600px) {
+@media screen and (max-width:715px) {
+
+    header nav .nav-left .register-login-btn .login-btn-text{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width : 625px){
+
+    .home-section-demo{
+        height: 500px;
+    }
+
+    .home-section-demo .container #owl_carousel .item_one_demo , .item_two_demo , .item_three_demo , .item_four_demo , .item_five_demo , .item_sixe_demo{
+        height: 420px;
+    }
+
+}
+
+@media screen and (max-width : 605px) {
 
     .section-two-container .supper-offer .img img{
         width: 35%;
@@ -774,6 +824,23 @@ header nav .nav-left .register-login-btn a{
     .section-two-container .supper-offer .header{
         display: none;
     }
+
+    .home-section-demo .container #owl_carousel div .img{
+        height: 250px;
+    }
+
+}
+
+@media screen and (max-width : 570px){
+
+    .list-items-section .container{
+        display: flex;
+    }
+    
+    .list-items-section .container .div-list-home{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 @media screen and (max-width : 550px){
@@ -783,16 +850,15 @@ header nav .nav-left .register-login-btn a{
     }
 }
 
-@media screen and (max-width:420px) {
-
-    header nav .nav-right{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-    }
+@media screen and (max-width:475px){
 
     header nav .nav-right input{
-        transform: translate(-50px, 30px);
+        width: 200px;
     }
+
+}
+
+@media screen and (max-width:420px){
 
     .list-items-section .container .div-list-home .list-one .img-one img{
         width: 150px;
@@ -812,12 +878,10 @@ header nav .nav-left .register-login-btn a{
 
 }
 
-@media screen and (max-width:520px) {
+@media screen and (max-width:375px){
 
-    header nav .nav-left .register-login-btn .login-btn-text{
-        display: none;
-    }
     header nav .nav-right input{
-        width: 35%;
+        width: 150px;
     }
+
 }

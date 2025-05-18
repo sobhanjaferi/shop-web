@@ -1,43 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account</title>
-    <link rel="stylesheet" href="../index.html">
     <link rel="stylesheet" href="../main/main.css">
-    <link rel="web icon" href="../Tools/Imgs/account-icon.png">
     <link rel="stylesheet" href="../login/login.css">
     <link rel="stylesheet" href="../Tools/Icons/fontawesome-free-6.7.2-web/css/all.min.css">
 </head>
 <body>
 
     <div class="container">
-        <form action="" class="form" method="get">
+        <form action="" method="get">
             <div class="div-name">
-            <label for="name">لطفا نام خودرا وارد کنید:</label>
-            <input type="text" class="ipt-name" placeholder="نام و نام خانوادگی"
-             id="name" name="name " required>
+                <label for="ipt-name">لطفا نام خود را وارد کنید:</label>
+                <input type="text" class="ipt-name" name="user_name" id="ipt-name" placeholder="نام و نام خانوادگی" required>
             </div>
             <br>
             <hr>
             <div class="div-number">
-                <label for="number">تلفن همراه خودرا وارد کنید:</label>
-                    <input type="number" id="number" class="ipt-number"
-                    placeholder="تلفن همراه" name="number " required>
-                    <i class="fa-solid fa-phone"></i>
+                <label for="number">تلفن همراه خود را وارد کنید:</label>
+                <input type="number" id="number" name="user_number" class="ipt-number" placeholder="تلفن همراه" required>
+                <i class="fa-solid fa-phone"></i>
             </div>
             <br>
             <hr>
             <div class="div-date">
-                <label for="date">تاریخ تولد خودرا وارد کنید:</label>
-                <input type="date" id="date" class="ipt-date" name="date " required>
+                <label for="date">تاریخ تولد خود را وارد کنید:</label>
+                <input type="date" id="date" name="user_birth_year" class="ipt-date" required>
             </div>
             <br>
-            <a href="../index.html"  class="btn-account">ورود</a>
+            <div class="submit" id="submit">
+                <!-- <a href="../index.html"></a> -->
+                <button type="button" class="btn-account" id="btn-account">ورود</button>
+            </div>
         </form>
     </div>
 
     <script src="../login/login.js"></script>
+
 </body>
 </html>

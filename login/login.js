@@ -4,8 +4,9 @@ let phoneIpt = document.getElementById("number");
 let phoneIcon = document.querySelector("i");
 let nameIpt = document.querySelector(".div-name");
 let dateIpt = document.querySelector(".div-date");
+let submit = document.getElementById("btn-account");
 
-phoneIpt.addEventListener("click", ()=>{
+phoneIpt.addEventListener("click", function(){
     phoneIcon.style.color = "rgb(0, 55, 255)";
 
     nameIpt.addEventListener("click", ()=>{

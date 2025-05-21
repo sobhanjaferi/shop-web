@@ -594,8 +594,7 @@ header nav .nav-left .register-login-btn:hover a{
 }
 
 .home-section-demo .container{
-    width: 88%;
-    max-width: 100%;
+    width: 100%;
 }
 
 .home-section-demo .container #owl_carousel{
@@ -631,8 +630,9 @@ header nav .nav-left .register-login-btn:hover a{
 }
 
 .home-section-demo .container #owl_carousel .price{
-    text-align: right;
     color: #444;
+    text-align: right;
+    margin-top: 20px;
 }
 
 .home-section-demo .container #owl_carousel .buttons{
@@ -777,6 +777,35 @@ header nav .nav-left .register-login-btn:hover a{
     box-shadow: 0px 0px 10px 0px #444;
     transition: 0.5s;
     cursor: pointer;
+}
+
+.page_up_div{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    bottom: 50px;
+}
+
+.page_up{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #062e4a;
+    margin-right: 40px;
+    transition: 0.2s;
+    border: 2px solid #444;
+}
+
+.page_up:hover{
+    padding: 13px 23px;
+    margin-right: 36px;
+    margin-top: -3px;
+}
+
+#page_up_icon{
+    color: white;
 }
 
 /* ================================= mediy query ================================= */

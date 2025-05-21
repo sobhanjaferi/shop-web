@@ -1,16 +1,18 @@
 // ============================= search bar =============================
 
-let listICons = document.getElementById("list_icon");
-let iconList = document.getElementById("list_icon_true");
-let closeIcon = document.getElementById("list_icon_false");
+const listICons = document.getElementById("list_icon");
+const iconList = document.getElementById("list_icon_true");
+const closeIcon = document.getElementById("list_icon_false");
 
-let navBarDivIcons = document.getElementById("container_list_icon");
-let navBarIconFirst = document.getElementById("acount");
-let navBarIconSecond = document.getElementById("house");
-let navBarIconThird = document.getElementById("shopping_card");
+const navBarDivIcons = document.getElementById("container_list_icon");
+const navBarIconFirst = document.getElementById("acount");
+const navBarIconSecond = document.getElementById("house");
+const navBarIconThird = document.getElementById("shopping_card");
 
-let searchIpt = document.getElementById("search-ipt");
-let searchIcon = document.getElementById("search-icon");
+const searchIpt = document.getElementById("search-ipt");
+const searchIcon = document.getElementById("search-icon");
+
+const slideUp = document.getElementById("page_up");
 
 const navBar = {
     1 : listICons,
@@ -21,7 +23,8 @@ const navBar = {
     6 : navBarIconSecond,
     7 : navBarIconThird,
     8 : searchIpt,
-    9 : searchIcon
+    9 : searchIcon,
+    10 : slideUp
 }
 
 navBar[8].style.display = "none";
@@ -41,6 +44,19 @@ navBar[3].addEventListener("click", function(){
     navBar[4].style.display = "none";
     navBar[2].style.display = "flex";
     navBar[3].style.display = "none";
+})
+
+navBar[10].style.display = "none";
+
+let timeSlideUp = function(){setTimeout(()=>{
+    navBar[10].style.display = "inline";
+},5000)}
+
+timeSlideUp()
+
+navBar[10].addEventListener("click",()=>{
+    navBar[10].style.display = "none";
+    timeSlideUp()
 })
 
 // ============================= slider =============================

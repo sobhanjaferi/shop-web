@@ -61,45 +61,21 @@ navBar[10].addEventListener("click",()=>{
 
 // ============================= slider =============================
 
-let slids = document.querySelector(".item");
-let slide1 = document.getElementById("slide1");
-let slide2 = document.getElementById("slide2");
-let slide3 = document.getElementById("slide3");
+let slides = document.querySelectorAll(".item");
+let currentIndex = 0;
 
-let icon1 = document.getElementById("icon1");
-let icon2 = document.getElementById("icon2");
-let icon3 = document.getElementById("icon3");
+function changeSlide() {
 
-icon1.addEventListener("click",()=>{
-    slide1.style.display = 'block';
-    slide2.style.display = 'none';
-    slide3.style.display = 'none';
-    set.add("hidden")
-});
-icon2.addEventListener("click",()=>{
-    slide2.style.display = 'block';
-    slide1.style.display = 'none';
-    slide3.style.display = 'none';
+    slides.forEach(slide => slide.style.display = "none");
 
-});
-icon3.addEventListener("click",()=>{
-    slide3.style.display = 'block';
-    slide1.style.display = 'none';
-    slide2.style.display = 'none';
-});
+    slides[currentIndex].style.display = "block";
 
-let set =  setInterval(()=>{
-    slide1.style.display = "none";
-    slide2.style.display = "block";
-        setInterval(()=>{
-            slide2.style.display = "none";
-            slide3.style.display = "block";
-                setInterval(()=>{
-                    slide3.style.display = "none";
-                    slide1.style.display = "block";
-        },4000)
-    },4000)
-},4000)
+    currentIndex = (currentIndex + 1) % slides.length;
+}
+
+setInterval(changeSlide, 3000);
+
+changeSlide();
 
 // ============================= home section supper-offer =============================
 

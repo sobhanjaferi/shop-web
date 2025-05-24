@@ -18,3 +18,13 @@ phoneIpt.addEventListener("click", function(){
     })
 
 })
+
+// ==================== button-event ====================
+
+const save = document.getElementById("btn-account");
+
+save.addEventListener("click",()=>{
+    setTimeout(()=>{
+        window.location.href = "../index.html";
+    },3000);
+});
